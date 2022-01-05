@@ -10,14 +10,21 @@ import UIKit
 class ViewController: UIViewController {
 
 
-    @IBOutlet weak var viewTop: UIView!
+
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.navigationBar.backgroundColor = Colors.complementary1Color
-        viewTop.backgroundColor = Colors.complementary2Color
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = Colors.complementary1Color
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
 
-        var view11 = UIView()
+
+
+
+
 
 
 
